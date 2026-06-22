@@ -111,7 +111,7 @@ export function HeroText3D() {
     <group ref={ref} position={[0, 0, 0]}>
       <Center>
         <Text3D
-          font="/fonts/helvetiker_bold.typeface.json"
+          font={`${import.meta.env.BASE_URL}fonts/helvetiker_bold.typeface.json`}
           size={0.5}
           height={0.15}
           curveSegments={12}

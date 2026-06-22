@@ -8,8 +8,8 @@ export const developer = {
   github: 'https://github.com/lirishatayal',
   linkedin: 'https://www.linkedin.com/in/lirisha-tayal-927165160/',
   twitter: 'https://twitter.com/lirishatayal',
-  avatar: '/avatar.png',
-  resume: '/resume.pdf',
+  avatar: `${import.meta.env.BASE_URL}avatar.png`,
+  resume: `${import.meta.env.BASE_URL}resume.pdf`,
 };
 
 export const about = {

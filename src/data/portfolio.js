@@ -34,10 +34,11 @@ export const about = {
     { label: 'Coffee Consumed', value: '∞', icon: 'coffee' },
   ],
   interests: [
+    'Interactive UI/UX Design',
     '3D Web Experiences',
-    'Design Systems',
     'Performance Optimization',
-    'Creative Coding',
-    'Open Source',
+    'Creative Coding & Animations',
+    'Design Systems',
+    'Open Source Contribution',
   ],
 };

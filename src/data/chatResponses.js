@@ -1,3 +1,8 @@
+import { looksLikeTypo } from '../utils/gibberishDetection';
+
+const TYPO_RESPONSE =
+  'This seems like a typo. Try asking something about me.';
+
 const responses = [
   {
     keywords: ['hello', 'hi', 'hey', 'greetings'],
@@ -55,6 +60,10 @@ export function getChatResponse(input) {
     if (item.keywords.some((kw) => normalized.includes(kw))) {
       return item.response;
     }
+  }
+
+  if (looksLikeTypo(normalized)) {
+    return TYPO_RESPONSE;
   }
 
   return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];

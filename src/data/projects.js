@@ -1,0 +1,38 @@
+export const projects = [
+  {
+    id: 'mini-game-zone',
+    title: 'Mini Game Zone',
+    description: 'Interactive arcade with memory cards, object catching, and reaction tests.',
+    tech: ['React', 'Framer Motion', 'Canvas'],
+    color: '#ec4899',
+    component: 'MiniGameZone',
+    featured: true,
+  },
+  {
+    id: 'animation-lab',
+    title: 'Animation Lab',
+    description: 'Live playground for GSAP and Framer Motion experiments with toggleable styles.',
+    tech: ['GSAP', 'Framer Motion', 'React'],
+    color: '#88ce02',
+    component: 'AnimationLab',
+    featured: true,
+  },
+  {
+    id: 'api-app',
+    title: 'API Explorer',
+    description: 'Weather demo, mood-based quotes, and live TMDB movies — three API-powered mini-apps in one.',
+    tech: ['React', 'TMDB API', 'Framer Motion'],
+    color: '#3b82f6',
+    component: 'ApiApp',
+    featured: true,
+  },
+  {
+    id: 'chat-assistant',
+    title: 'Portfolio Assistant',
+    description: 'AI-style chat interface with intelligent responses about my work and skills.',
+    tech: ['React', 'NLP Patterns', 'Animations'],
+    color: '#f59e0b',
+    component: 'ChatAssistant',
+    featured: false,
+  },
+];

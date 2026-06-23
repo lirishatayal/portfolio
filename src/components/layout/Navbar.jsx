@@ -9,6 +9,7 @@ const primaryLinks = [
   { label: 'Skills', href: '#skills', id: 'skills' },
   { label: 'Projects', href: '#projects', id: 'projects' },
   { label: 'Experience', href: '#experience', id: 'experience' },
+  { label: 'Education', href: '#education', id: 'education' },
 ];
 
 const sectionIds = ['hero', ...primaryLinks.map((l) => l.id), 'contact'];

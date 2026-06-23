@@ -17,6 +17,10 @@ const responses = [
     response: "I have 4.5+ years of frontend development experience. Currently Frontend Developer II at Z1 Tech (Delhi), previously Programmer Analyst Trainee at Cognizant. Scroll to the Experience section for the full timeline!",
   },
   {
+    keywords: ['education', 'degree', 'college', 'university', 'school', 'study', 'btech'],
+    response: "I hold a B.Tech in Electronics and Communication Engineering from Bharati Vidyapeeth College of Engineering, Delhi (2019–2022). Check the Education section for details!",
+  },
+  {
     keywords: ['project', 'portfolio', 'built', 'created'],
     response: "I've built everything from design systems to 3D e-commerce platforms. This portfolio itself showcases my skills — try the Mini Game Zone, Animation Lab, or API Explorer in the Projects section!",
   },
@@ -42,7 +46,7 @@ const responses = [
   },
   {
     keywords: ['easter', 'egg', 'secret', 'hidden'],
-    response: "You found a secret! 🌟 Try the Konami code (↑↑↓↓←→←→BA) for a surprise, or click the floating shapes in the hero section. There are more secrets hidden throughout this portfolio...",
+    response: "You found a secret! Try the Konami code (↑↑↓↓←→←→BA) in the footer for a coffee-powered surprise — or explore the floating shapes in the hero section.",
   },
 ];
 

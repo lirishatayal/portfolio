@@ -8,21 +8,16 @@ export const experience = [
     description:
       'Building and shipping high-scale, performance-focused web applications for platforms serving millions of users.',
     achievements: [
-      'Built and shipped 70+ responsive web applications using React.js, Next.js, JavaScript, HTML5, CSS3, and Tailwind CSS',
-      'Achieved 98%+ cross-browser compatibility and optimized apps for sub-3s load time',
-      'Converted Figma/PSD designs into pixel-perfect, mobile-first interfaces',
-      'Resolved 700+ complex UI, DOM, and performance issues using advanced debugging techniques',
-      'Integrated third-party APIs, analytics tools, and ad-tech scripts while maintaining performance',
-      'Worked on high-scale platforms serving 10M+ monthly users with 99.9% uptime',
-      'Built and optimized ad formats (video, banner, interstitial) for performance and responsiveness',
-      'Improved performance by reducing bundle size by 35% using lazy loading and optimization strategies',
-      'Led UI improvements for 50+ funnel pages, increasing conversion rate by 8%',
-      'Collaborated with design, product, and backend teams to deliver scalable solutions',
-      'Leveraged AI tools (GitHub Copilot, Cursor) to improve development speed and code quality',
+      'Optimized web application performance by reducing bundle size by 35% using lazy loading and code-splitting, resulting in sub-3s load times and improved user engagement',
+      'Led UI improvements for 50+ funnel pages by identifying UX bottlenecks and redesigning key interactions, increasing conversion rates by 8%',
+      'Built scalable frontend architecture for high-traffic platforms serving 10M+ monthly users, ensuring 99.9% uptime and smooth user experience',
+      'Integrated third-party APIs, analytics, and ad-tech scripts while minimizing performance impact through efficient loading strategies',
+      'Diagnosed and resolved 700+ UI and performance issues by analyzing DOM behavior and optimizing rendering workflows',
+      'Developed responsive, pixel-perfect interfaces from Figma/PSD designs with a mobile-first approach, improving cross-browser compatibility to 98%+',
     ],
     projects: [
       {
-        title: 'Insurance Funnel Applications',
+        title: 'Insurance',
         highlights: [
           'Redesigned 50+ lead generation pages',
           'Built multi-step user flows to improve engagement',
@@ -31,7 +26,7 @@ export const experience = [
         ],
       },
       {
-        title: 'VDO.AI Platform',
+        title: 'VDO.AI',
         highlights: [
           'Contributed to a platform with 10M+ monthly users',
           'Built responsive ad units & UI components',

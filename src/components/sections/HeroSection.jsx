@@ -28,14 +28,21 @@ export default function HeroSection() {
           {developer.name}
         </motion.h1>
 
-        <motion.p
-          className="type-body-lg text-slate-400 max-w-2xl mx-auto px-2"
+        <motion.div
+          className="hero-taglines type-body-lg text-slate-400 mx-auto px-2 space-y-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.6, duration: 0.8 }}
         >
-          {developer.tagline}
-        </motion.p>
+          {developer.taglines.map((line, index) => (
+            <p
+              key={line}
+              className={index === 0 ? 'hero-taglines__primary m-0' : 'm-0'}
+            >
+              {line}
+            </p>
+          ))}
+        </motion.div>
 
         <motion.div
           className="hero-actions"

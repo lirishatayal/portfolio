@@ -1,6 +1,6 @@
-import { useState, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Palette, MessageCircle, Gamepad2 } from 'lucide-react';
+import { Coffee, Palette, MessageCircle, Gamepad2 } from 'lucide-react';
 import { ThemeProvider } from './context/ThemeContext';
 import { ModalProvider } from './context/ModalContext';
 import { useScrollProgress } from './hooks/useScrollProgress';
@@ -16,6 +16,7 @@ import AboutSection from './components/sections/AboutSection';
 import SkillsSection from './components/sections/SkillsSection';
 import ProjectsSection from './components/sections/ProjectsSection';
 import ExperienceSection from './components/sections/ExperienceSection';
+import EducationSection from './components/sections/EducationSection';
 import ContactSection from './components/sections/ContactSection';
 import { useModal } from './context/ModalContext';
 
@@ -29,17 +30,35 @@ function EasterEgg({ active }) {
     <AnimatePresence>
       {active && (
         <motion.div
-          className="fixed inset-0 z-[150] flex items-center justify-center pointer-events-none"
+          key="konami-easter-egg"
+          className="konami-easter-egg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
+          transition={{ duration: 0.35 }}
+          role="status"
+          aria-live="polite"
         >
           <motion.div
-            className="font-display text-4xl md:text-6xl font-black gradient-text neon-text"
-            animate={{ scale: [1, 1.2, 1], rotate: [0, 5, -5, 0] }}
-            transition={{ duration: 2 }}
+            className="konami-easter-egg__card"
+            initial={{ opacity: 0, scale: 0.9, y: 24 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.96, y: 12 }}
+            transition={{ type: 'spring', stiffness: 280, damping: 22 }}
           >
-            🚀 SECRET UNLOCKED 🌟
+            <p className="konami-easter-egg__eyebrow">Secret unlocked</p>
+            <div className="konami-easter-egg__icon-wrap" aria-hidden="true">
+              <Coffee size={36} className="text-neon-cyan" />
+              <span className="konami-easter-egg__infinity">∞</span>
+            </div>
+            <h2 className="konami-easter-egg__title gradient-text neon-text">
+              Coffee Level: Infinite
+            </h2>
+            <p className="konami-easter-egg__message">
+              Fun fact: I don&apos;t debug with breakpoints — I debug with espresso.
+              The About section says <strong>∞ coffee consumed</strong>, and honestly?
+              That stat is still climbing.
+            </p>
           </motion.div>
         </motion.div>
       )}
@@ -80,14 +99,33 @@ function AppContent() {
   const [loaded, setLoaded] = useState(false);
   const [easterEgg, setEasterEgg] = useState(false);
   const scrollProgress = useScrollProgress();
+  const easterEggTimeoutRef = useRef(null);
 
-  useKonamiCode(() => {
+  const handleKonamiActivate = useCallback(() => {
     setEasterEgg(true);
-    setTimeout(() => setEasterEgg(false), 3000);
-  });
+    if (easterEggTimeoutRef.current) {
+      clearTimeout(easterEggTimeoutRef.current);
+    }
+    easterEggTimeoutRef.current = setTimeout(() => setEasterEgg(false), 5500);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (easterEggTimeoutRef.current) {
+        clearTimeout(easterEggTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  useKonamiCode(handleKonamiActivate);
 
   if (!loaded) {
-    return <LoadingScreen onComplete={() => setLoaded(true)} />;
+    return (
+      <>
+        <EasterEgg active={easterEgg} />
+        <LoadingScreen onComplete={() => setLoaded(true)} />
+      </>
+    );
   }
 
   return (
@@ -110,6 +148,7 @@ function AppContent() {
           <SkillsSection />
           <ProjectsSection />
           <ExperienceSection />
+          <EducationSection />
           <ContactSection />
         </main>
         <Footer />

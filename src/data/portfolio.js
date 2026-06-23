@@ -1,7 +1,10 @@
 export const developer = {
   name: 'Lirisha Tayal',
   title: 'Frontend Developer',
-  tagline: 'Crafting immersive digital experiences at the intersection of design, code, and 3D.',
+  taglines: [
+    'Frontend Engineer specializing in high-performance, scalable web applications',
+    'Building fast, responsive experiences for millions of users',
+  ],
   email: 'tayallirisha@gmail.com',
   phone: '8851409127',
   location: 'Delhi, India',

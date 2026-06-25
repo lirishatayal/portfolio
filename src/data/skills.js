@@ -15,7 +15,7 @@ export const skillCategories = [
   },
   {
     id: 'apis',
-    title: 'APIs & Integration',
+    title: 'APIs Integration',
     color: '#3b82f6',
     items: ['REST APIs', 'API Integration'],
   },

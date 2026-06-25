@@ -4,13 +4,13 @@ export const skillCategories = [
     title: 'Frontend',
     color: '#61dafb',
     items: [
-      'React.js (Hooks)',
-      'JavaScript (ES6+)',
       'HTML5',
       'CSS3',
+      'JavaScript (ES6+)',
+      'React.js',
+      'Next.js',
       'Tailwind CSS',
       'Bootstrap',
-      'Next.js',
     ],
   },
   {

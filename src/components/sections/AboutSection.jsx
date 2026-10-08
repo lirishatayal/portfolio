@@ -191,7 +191,7 @@ export default function AboutSection() {
               variant="secondary"
               size="md"
               className="about-section__btn about-section__btn--outline"
-              download="Lirisha_Tayal_Resume.pdf"
+              download="resume.pdf"
             >
               <ArrowDownToLine size={16} aria-hidden="true" />
               Download Resume
